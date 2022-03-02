@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>Employee Register</title>
+<!-- CSS only -->
+</head>
+<body align="center" bgcolor="wheat">
+	
+		<h1>Employee Register Page</h1> <h3> Create your account </h3>
+		<form th:action="@{/employee/save}" method="post"
+			th:object="${employee}"><hr> 
+			First Name :  <input type="text"
+					id="firstName"
+					placeholder="Enter FirstName" th:field="*{firstName}"><br><br>
+			Last Name :<input type="text"
+					id="lastName"
+					placeholder="Enter LastName" th:field="*{lastName}"><br><br>
+			
+			Salary : <input type="text"
+					id="salary"
+					placeholder="Enter Salary" th:field="*{salary}"><br><br>
+					
+		<!-- 			
+			Department :  <input type="text"
+					class="form-control" id="lastName"
+					placeholder="Enter Department" th:field="*{department}"><br><br>
+					 -->
+					
+					
+					 <label for="department">Department :</label>
+      <select id="department" th:field="*{department}">
+        <option th:value="Development" th:text="Development"></option>
+        <option th:value="Testing" th:text="Testing"></option>
+        <option th:value="HumanResource" th:text="HumanResource"></option>
+      </select><br><br>
+					
+					
+			Email :<input type="email" id="email"
+					placeholder="Enter email" th:field="*{email}"><br><br>
+			Password : <input type="password" id="password" placeholder="Password"
+					th:field="*{password}"><br><br>
+			Mobile Number : <input type="text"
+					 id="mobileNumber" placeholder="mobile"
+					th:field="*{mobileNumber}"><br><br>
+			Address :<input type="text" id="address"
+					placeholder="Enter Address" th:field="*{address}"><br><br>
+			<button type="submit" class="btn btn-primary">Submit</button>
+		</form>
+	
+</body>
+</html>

@@ -1,0 +1,23 @@
+*{
+	margin: 0;
+	padding: 0;
+}
+
+body
+{
+	margin-top:15%;
+	background-color:teal;
+	font-family: tahoma;
+	font-size: 20px;
+	text-align: center;
+}
+
+a:link
+{
+	color: orange;
+}
+a:hover
+{
+	color:black;
+	background: white;
+}
